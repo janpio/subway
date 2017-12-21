@@ -175,7 +175,10 @@ for line, run in runs_by_line.items():
 for xfer in csv.DictReader(open('google_transit/transfers.txt')):
     from_id = xfer['from_stop_id']
     to_id = xfer['to_stop_id']
-    time = float(xfer['min_transfer_time'])
+    if not xfer['min_transfer_time'] == "":
+        time = float(xfer['min_transfer_time'])
+    else:
+        time = float(0)
     for (a, b) in [(from_id, to_id), (to_id, from_id)]:
         edges[a].append({"to_node": b, "time": time})
 

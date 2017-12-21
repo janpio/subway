@@ -134,7 +134,7 @@ stations_on_lines = {id: stations_by_id[id] for id in stations_on_lines}
 lines = {line: 
             {
                 "stations": run.station_sequence, 
-                "color": '#' + run.route['route_color']
+                "color": '#008000' #+ run.route['route_color']
             }
         for line, run in runs_by_line.items()}
 subway_json = {

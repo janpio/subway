@@ -142,7 +142,7 @@ subway_json = {
     "stations": stations_on_lines
 }
 
-open('subway.json', 'w').write(json.dumps(subway_json))
+open('output/subway.json', 'w').write(json.dumps(subway_json))
 
 # compute a routing graph:
 # the node for being at a station is represented by a station_id
@@ -179,9 +179,9 @@ for xfer in csv.DictReader(open('google_transit/transfers.txt')):
     for (a, b) in [(from_id, to_id), (to_id, from_id)]:
         edges[a].append({"to_node": b, "time": time})
 
-open('routing_graph.json', 'w').write(json.dumps({"edges": edges}))
+open('output/routing_graph.json', 'w').write(json.dumps({"edges": edges}))
 
 for name in ['subway', 'routing_graph']:
-    d = open(name + '.json').read()
+    d = open('output/' + name + '.json').read()
     c = name + ' = ' + d
-    open(name + '.js', 'w').write(c)
+    open('output/' + name + '.js', 'w').write(c)

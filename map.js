@@ -42,7 +42,7 @@ let computeStationPositions = (originStationId, travelTimes) => {
 		
 		let deltaY = lat - originLat;
 		let deltaX = (lon - originLon) * 0.767;
-		let angle = Math.atan2(deltaY, deltaX) + 30 / 180 * Math.PI;
+		let angle = Math.atan2(deltaY, deltaX) + 0 * Math.PI;
 		let origDist = Math.sqrt(Math.pow(deltaX, 2) + Math.pow(deltaY, 2));
 		
 		let dist = travelTimes ? (travelTimes[stationId]) / maxTravelTime : origDist * 5;

@@ -30,7 +30,7 @@ let {stations, lines} = subway;
 		
 window.travelTimes = null;
 
-let defaultStop = '127'; // times sq
+let defaultStop = '900000100003';
 
 let computeStationPositions = (originStationId, travelTimes) => {
 	let originLat = stations[originStationId || defaultStop].lat;

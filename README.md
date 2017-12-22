@@ -24,3 +24,19 @@ If your city's transit system provides data in the GTFS format, you can _probabl
 3. Use Python 3 to run `gtfs_json.py` — this generates a new copy of the `schedules/` folder and its contents.
 
 Feel free to post an issue if you have any questions!
+
+## Research and Notes
+* Data Source
+  * http://www.vbb.de/de/download/GTFS.zip
+  * https://transitfeeds.com/p/verkehrsverbund-berlin-brandenburg/213
+  * https://transitfeeds.com/p/verkehrsverbund-berlin-brandenburg/213/latest/routes?type=400
+* Google Maps for Comparison
+  * https://www.google.de/maps/@52.5545076,13.4263629,10.31z/data=!5m1!1e2
+* GTFS
+  * https://developers.google.com/transit/gtfs/reference/
+  * https://sites.google.com/site/gtfschanges/proposals/route-type
+  * https://developers.google.com/transit/gtfs/reference/extended-route-types
+* Filter
+  * https://gis.stackexchange.com/a/219398/111548
+  * http://developer.onebusaway.org/modules/onebusaway-gtfs-modules/current-SNAPSHOT/onebusaway-gtfs-transformer-cli.html
+  * `java -Xmx3G -jar .\onebusaway-gtfs-transformer-cli-1.3.4-20150503.062227-12.jar --transform=retain.txt 1190951.zip filtered.zip`
